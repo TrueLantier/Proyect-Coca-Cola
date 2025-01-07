@@ -16,7 +16,7 @@ public class ProyectoFinal2 extends JFrame implements ActionListener, ChangeList
         setLayout(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Licencia de uso");
-        setIconImage(new ImageIcon(getClass().getResource("images/icon.png")).getImage()); //Esto no funciona
+        setIconImage(new ImageIcon(getClass().getResource("images/icon.png")).getImage()); //Esto no funciona.
         ProyectoFinal1 ventana1 = new ProyectoFinal1();
         nombreUsuario = ventana1.ingreso_nombre;
 
