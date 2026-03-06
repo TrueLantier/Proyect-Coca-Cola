@@ -102,7 +102,7 @@ public class ProyectoFinal2 extends JFrame implements ActionListener, ChangeList
         }
     }
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         ProyectoFinal2 proyectoFinal2 = new ProyectoFinal2();
         proyectoFinal2.setBounds(0,0,660,360);
         proyectoFinal2.setVisible(true);

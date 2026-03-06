@@ -71,7 +71,7 @@ public class ProyectoFinal1 extends JFrame implements ActionListener {
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         ProyectoFinal1 proyectoFinal1 = new ProyectoFinal1();
         proyectoFinal1.setBounds(0,0,350,450);
         proyectoFinal1.setVisible(true);

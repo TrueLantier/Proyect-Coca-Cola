@@ -1,7 +1,11 @@
+import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.themes.FlatMacDarkLaf;
+
 import javax.swing.*;
 import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Objects;
 
 public class ProyectoFinal3 extends JFrame implements ActionListener {
 
@@ -27,7 +31,6 @@ public class ProyectoFinal3 extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Pantalla Principal");
         getContentPane().setBackground(new Color(255,0,0));
-        setIconImage(new ImageIcon(getClass().getResource("images/icon.png")).getImage()); //Esto no funciona.
         ProyectoFinal1 ventana1 = new ProyectoFinal1();
         nombre = ventana1.ingreso_nombre;
 
@@ -38,7 +41,7 @@ public class ProyectoFinal3 extends JFrame implements ActionListener {
         menuOpciones = new JMenu("Opciones");
         menuOpciones.setBackground(new Color(255,0,0)); //Por alguna razón esto no funciona.
         menuOpciones.setFont(new Font("Andale Mono", 1, 14));
-        menuOpciones.setForeground(new Color(255,255,255));
+        menuOpciones.setForeground(new Color(0,0,0)); // Color del nombre.
         menubar.add(menuOpciones);
 
         menuCalcular = new JMenu("Calcular");
@@ -353,7 +356,14 @@ public class ProyectoFinal3 extends JFrame implements ActionListener {
         }
     }
 
-    public static void main(String args[]){
+    public static void main(String[] args) throws UnsupportedLookAndFeelException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+        UIManager.setLookAndFeel(new FlatMacDarkLaf());
+        //UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+        //UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); // Del sistema operativo
+        //UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel"); // Por defecto de Java
+        //UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel"); // Feo
+
+
         ProyectoFinal3 proyectoFinal3 = new ProyectoFinal3();
         proyectoFinal3.setBounds(0,0,640,535);
         proyectoFinal3.setVisible(true);
